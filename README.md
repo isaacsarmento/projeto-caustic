@@ -1,5 +1,9 @@
 # Projeto Caustic
-Descrição do Projeto
+![Caustic-logo](https://github.com/iNdkGG/projeto-caustic/assets/67072820/5c5b75f8-0c60-4d57-9bc7-993312d06082)
+
+![Badge em Desenvolvimento](http://img.shields.io/static/v1?label=STATUS&message=EM%20DESENVOLVIMENTO&color=GREEN&style=for-the-badge)
+
+# Descrição do Projeto
 Este repositório contém o código-fonte e os recursos necessários para implementar um sistema anti vazamento de gás utilizando o Esp32, sensor MQ2, buzzer, LED, relé com válvula solenoide e o aplicativo Thunkable.
 
 # Problema
