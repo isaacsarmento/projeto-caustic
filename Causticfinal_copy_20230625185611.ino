@@ -5,8 +5,8 @@
 #include <time.h>
 #include <TimeLib.h>
 
-#define FIREBASE_HOST "esp-32-40d6f-default-rtdb.firebaseio.com"
-#define FIREBASE_AUTH "PINpuhGSOJFVWZjJ46no8llI0dJDga7SmqxbvVQv"
+#define FIREBASE_HOST 
+#define FIREBASE_AUTH 
 
 #define MQ2_PIN 32
 #define LED_PIN 17
