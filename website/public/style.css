@@ -1,0 +1,164 @@
+* {
+  --cor_principal:#FF9900;
+  --cor_secundaria: #dca95c;
+  --cor_terciaria: #E8C083;
+}
+
+
+html {
+    font-family: Lato, Verdana, Geneva, Tahoma, sans-serif;
+    display: inline-block;
+    text-align: center;
+}
+
+p {
+    font-size: 1.2rem;
+}
+
+body {
+    margin: 0;
+}
+
+.botao_esqueceu_senha {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.topnav {
+    overflow: hidden;
+    background-color: var(--cor_principal);
+    color: white;
+    font-size: 1rem;
+    padding: 10px;
+    margin-bottom: 20px; 
+}
+
+#authentication-bar{
+    background-color:mintcream;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+#user-details{
+    color: var(--cor_terciaria);
+}
+
+.content {
+    padding: 20px;
+}
+
+.card {
+    background-color: white;
+    box-shadow: 2px 2px 12px 1px rgba(140,140,140,.5);
+    padding: 5%;
+}
+
+.cards {
+    max-width: 800px;
+    margin: 0 auto;
+    display: grid;
+    grid-gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+.reading {
+    font-size: 1.4rem;
+}
+
+button {
+    background-color: var(--cor_secundaria);
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+}
+button:hover {
+    opacity: 0.8;
+}
+
+/* Estilo CSS para o formulário */
+
+.form-container {
+    background-color: #ffffff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    max-width: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 400px;
+    margin: 100px auto; /* adicione margem superior e inferior ao contêiner do formulário */
+    font-family: "Helvetica Neue", sans-serif;
+  }
+  
+  .form-container h2 {
+    margin: 0 0 20px;
+    margin-bottom: 55px;
+  }
+  
+  .form-input {
+    display: flex !important; 
+    flex-direction: column !important; 
+    margin-bottom: 40px;
+  }
+  
+  .form-input label {
+    font-weight: bold;
+  }
+  
+  .form-input input {
+    padding: 10px;
+    border-radius: 23px;
+    border: none;
+  }
+
+  .form-input input:focus {
+    outline: none;
+  }
+  
+  #login-button {
+    background-color: var(--cor_secundaria);
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 30px; /* aumente o preenchimento para tornar o botão maior */
+    font-size: 16px; /* aumente o tamanho da fonte para tornar o texto maior */
+  }
+  
+  #login-button:hover {
+    cursor: pointer;
+  }
+  
+  #error-message {
+      color: red;
+  }
+
+  #success-message {
+    color: green;
+  }
+
+  /* Modo dark */
+
+  html[dark]{
+    background-color: #1c1c1c
+    ;
+}
+  
+  
+  
+  
+  
+
+.sobre {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+.esqueceu_senha {
+  padding-top: 250px;
+  color: var(--cor_secundaria);
+}
+

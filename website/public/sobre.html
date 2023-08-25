@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Projeto Caustic - Sobre</title>
+
+    <!-- update the version number as needed -->
+    <script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-app.js"></script>
+
+    <!-- include only the Firebase features as you need -->
+    <script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-database.js"></script>
+
+    <script>
+     // REPLACE WITH YOUR web app's Firebase configuration
+      const firebaseConfig = {
+        apiKey: "AIzaSyBjQ2-RLbmqgXgTXS_rchkj6fgwkLdeoBk",
+        authDomain: "esp-32-40d6f.firebaseapp.com",
+        databaseURL: "https://esp-32-40d6f-default-rtdb.firebaseio.com",
+        projectId: "esp-32-40d6f",
+        storageBucket: "esp-32-40d6f.appspot.com",
+        messagingSenderId: "691919580252",
+        appId: "1:691919580252:web:c7891e42366c1b63264a99",
+        measurementId: "G-YCC8ZGMN7E"
+      };
+
+      // Initialize firebase
+      firebase.initializeApp(firebaseConfig);
+
+      // Make auth and database references
+      const auth = firebase.auth();
+      const db = firebase.database();
+
+    </script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="icons.css">
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+  <!--TOP BAR-->
+  <div class="topnav">
+    <h1>Caustic <i class="fas fa-clipboard-list"></i></h1>
+  </div>
+  <br>
+  <!--AUTHENTICATION BAR (USER DETAILS/LOGOUT BUTTON)-->
+  <div id="authentication-bar" style="display: none;">
+    <p><span id="authentication-status">Usuário logado</span>
+       <span id="user-details">USEREMAIL</span>
+       <a href="/" id="logout-link">(sair)</a>
+    </p>
+ 
+  </div class="cards">
+
+  <div class="card">
+    <p class="sobre"><i class="fas fa-check-circle"></i> Nível Baixo: Podemos definir o nível baixo de gás como uma faixa entre 300 e 1000. Essa faixa indica uma concentração de gás abaixo do limite considerado preocupante, mas ainda requer atenção e monitoramento contínuo para evitar que se torne uma situação de risco.</p>
+  </div>
+  <br>
+
+  <div class="card">
+    <p class="sobre"><i class="fas fa-exclamation-circle"></i> Nível Médio: O nível médio de gás pode ser estabelecido entre 1001 e 5999. Nessa faixa, a concentração de gás atinge um patamar mais elevado, ações para mitigar o vazamento como alertar os usuários e fechamento da válvula foram acionados.</p><p><b>*Caro usuário: se possível, ajudar na ventilação do ambiente</b></p>
+  </div>
+  <br>
+
+  <div class="card">
+    <p class="sobre"><i class="fas fa-exclamation-triangle"></i> Nível Crítico: O nível crítico de gás pode ser considerado acima de 6000. Nessa faixa, a concentração de gás atinge um nível perigoso, representando um alto risco de explosão, incêndio ou intoxicação grave. Nessa etapa acontece uma recalibração no dispositivo. Caso não for uma alarme falso, acionaremos novamente o sistema de alerta ao usuário e o fechamento da válvula. Se possível, recomendamos evacuar o ambiente e acionar as autoridades competentes para garantir a segurança de todos.</p>
+  </div>
+
+  </div>
+    <script src="scripts/auth.js"></script>
+    <script src="scripts/index.js"></script>
+    <script src="scripts/modo_dark.js"></script>
+  </body>
+</html>

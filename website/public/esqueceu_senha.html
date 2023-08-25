@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Projeto Caustic</title>
+
+    <!-- update the version number as needed -->
+    <script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-app.js"></script>
+
+    <!-- include only the Firebase features as you need -->
+    <script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-database.js"></script>
+
+    <script>
+     // REPLACE WITH YOUR web app's Firebase configuration
+      const firebaseConfig = {
+        apiKey: "AIzaSyBjQ2-RLbmqgXgTXS_rchkj6fgwkLdeoBk",
+        authDomain: "esp-32-40d6f.firebaseapp.com",
+        databaseURL: "https://esp-32-40d6f-default-rtdb.firebaseio.com",
+        projectId: "esp-32-40d6f",
+        storageBucket: "esp-32-40d6f.appspot.com",
+        messagingSenderId: "691919580252",
+        appId: "1:691919580252:web:c7891e42366c1b63264a99",
+        measurementId: "G-YCC8ZGMN7E"
+      };
+
+      // Initialize firebase
+      firebase.initializeApp(firebaseConfig);
+
+      // Make auth and database references
+      const auth = firebase.auth();
+      const db = firebase.database();
+
+    </script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="icons.css">
+    <link rel="stylesheet" type="text/css" href="auth.css">
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+  <!--TOP BAR-->
+  <div class="topnav">
+    <h1>Caustic <i class="fas fa-clipboard-list"></i></h1>
+  </div>
+
+<div class="cards">
+    <div class="card">
+    <form class="">
+        <h2>Resete sua senha!</h2>
+        <div class="form-input">
+        <input type="email" id="email" placeholder="Enter your email">
+        </div>
+        <button id="reset-password-button">Resete sua senha.</button>
+        <p id="message"></p>
+    </form>
+    </div>
+</div>
+  <div class="icon-container">
+      <a href="mailto:ifr.ferreira.sarmento63@gmail.com" class="icon email"><span>E-mail</span></a>
+      <a href="http://www.github.com" class="icon github"><span>Github</span></a>
+  </div>
+    <script src="scripts/index.js"></script>
+    <script src="scripts/redefinir_senha.js"></script>
+  </body>
+</html>

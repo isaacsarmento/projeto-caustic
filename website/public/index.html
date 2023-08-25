@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Projeto Caustic</title>
+
+    <!-- update the version number as needed -->
+    <script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-app.js"></script>
+
+    <!-- include only the Firebase features as you need -->
+    <script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-firestore.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+
+    <script>
+      const firebaseConfig = {
+		// hidden information
+      };
+
+      // Initialize firebase
+      firebase.initializeApp(firebaseConfig);
+
+      // Make auth and database references
+      const auth = firebase.auth();
+      const db = firebase.database();
+
+    </script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="icons.css">
+    <link rel="stylesheet" type="text/css" href="auth.css">
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+  <!--TOP BAR-->
+  <div class="topnav">
+    <h1>Caustic <i class="fas fa-clipboard-list"></i></h1>
+  </div>
+
+  <!--AUTHENTICATION BAR (USER DETAILS/LOGOUT BUTTON)-->
+  <div id="authentication-bar" style="display: none;">
+    <p><span id="authentication-status">Usuário logado</span>
+       <span id="user-details">USEREMAIL</span>
+       <a href="/" id="logout-link">(sair)</a>
+    </p>
+  </div>
+
+  <!--LOGIN FORM-->
+  <form id="login-form" class="form-container">
+    <h2>Login</h2>
+    <div class="form-input">
+      <label for="input-email"><i class="fas fa-envelope"></i> E-mail</label>
+      <br>
+      <input type="text" placeholder="Digite aqui seu e-mail." id="input-email" required>
+    </div>
+    <div class="form-input">
+      <label for="input-password"><i class="fas fa-lock"></i> Senha</label>
+      <br>
+      <input type="password" placeholder="Digite aqui sua senha." id="input-password" required>
+    </div>
+    <br>
+    <button type="submit" id="login-button">Login</button>
+    <p id="error-message"></p>
+  </form>
+  <!--Leitura dos sensores-->
+  <div ADINGSclass="content-sign-in" id="content-sign-in" style="display: none;">
+    <div class="cards">
+      <!--NÍVEL DE GÁS-->
+      <div class="card">
+        <p><i class="fas fa-fire"></i> Nível de gás!</p>
+        <p><span class="reading"><span id="hum"></span></span></p>
+        <canvas id="chart"></canvas>
+        <p id="mensagemReal"></p>
+      </div>
+
+      <!--StatusMensagem (teste)
+      <div class="card">
+        <p><i class="fa-solid fa-fire-smoke"></i> Status!</p>
+        <p><span class="reading"><span id="statusMensagem"></span></span></p>
+      </div>
+      -->
+      <div class="card">
+        <h2><i class="fas fa-cog"></i> Configurações</h1>
+        <button id="statusBuzzerElement">Desativar/Ativar Alarme Sonoro</button>
+        <button id="reset-button">Limpar Gráfico</button>
+        <br>
+        <button><a class="botao_esqueceu_senha" href="esqueceu_senha.html">Redefina sua senha</a></button>
+        <br>
+      </div>
+  </div>
+  
+  <!--<div>
+  <label for="input-dark-mode">
+      <a class="button">Modo dark</a>
+  </label>
+  <input type="checkbox" id="input-dark-mode">
+  </div>-->
+
+
+  <div class="icon-container"> 
+      <a href="mailto:ifr.ferreira.sarmento63@gmail.com" class="icon email"><span>E-mail</span></a>
+      <a href="http://www.github.com" class="icon github"><span>Github</span></a>
+  </div>
+
+    <script src="scripts/auth.js"></script>
+    <script src="scripts/index.js"></script>
+    <!--<script src="scripts/modo_dark.js"></script>-->
+    <script src="scripts/realtime_sensor.js"></script>
+    <script src="scripts/chart.js"></script>
+  </body>
+</html>
